@@ -4,7 +4,7 @@ A `Dockerfile` is a text document that contains all the commands a user could ca
 
 A `Docker image` is a read-only template that contains a set of instructions for creating a **container** for example:
 
-![hh](F:\CodeSandbox\docker\docker-mosh\assets\1c6ea4aacd1609507284547e8cdbba6aaa228fd2.png)
+![hh](./assets/1c6ea4aacd1609507284547e8cdbba6aaa228fd2.png)
 
 Once we have an image, we tell docker to start a container using that image.
 
