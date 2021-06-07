@@ -52,19 +52,15 @@ CMD node app.js
   
   - run ubuntu shell
 
-
+- `docker start -i 2f7` : run docker container in interactive mode and provide first parts of the container id
 
 #### <u>Commands</u>
 
 - `whoami` : shows the current user
 
 - `echo $0` : shows the shell directory
-  
-  
 
 > notice that ubuntu uses forward slash `/`
-
-
 
 ##### Package managers (apt)
 
@@ -81,6 +77,7 @@ CMD node app.js
 - `ls` : print directory files
   
   - blue text represent directories
+  - `ls -a` : show all files including hidden ones
 
 - `cd` :
   
@@ -116,10 +113,52 @@ CMD node app.js
   
   - `tail -n 5 file.txt` to read last 5 lines
 
-
-
 - `cat file1.txt file0.txt > file2.txt` to copy file1 content to the end of file2
   
   - `>` : redirect operator
 
 - <u>search text in files: lesson 20</u>
+
+- `find` : to find files and directories (in the current directory)
+  
+  - `find -type d` : find directories, to find files replace `d` with `f`
+  
+  - `find -type f -name "f*"` : find all files that start with f
+  
+  - `find -type f -iname "f*"` : `iname` is case insensitive
+  
+  - `find / .......` : find files and directories starting from root directory
+
+- `...;...;...` : chain commands
+  
+  - `... && ...` : chain commands and if one fails, execution stops
+  
+  - `... || ...` : executes either the first or the second 
+  
+  - ` .... | ....` : (pipes) takes output of the first command as input to second
+
+- `printenv` : print env variables
+  
+  - `printenv PATH` is equal to `echo $PATH` to print env variable
+  
+  - `export DB_USER=mosh` to set variables  -> available for only current session
+
+##### Processes
+
+- `ps` to print running process
+
+- `sleep 3 &` : the `&` create process in the background
+
+- `kill 38` kill process with `pid` 
+
+##### Manage users (25, 26)
+
+##### Files permission
+
+- `ls -l` to print all files with their permissions
+
+- `chmod` : is used to change user/group/other permission
+
+---
+
+# Docker
